@@ -1,3 +1,6 @@
+// Disclaimer: Good variable and function names should in general take the place of most comments.
+//             However, as the intention here is explain my code, I have commented as much as possible.
+//             I have edited the code below as if it were a live project that may require ongoing extension or maintenance.
 
 // This is an efficient function to quickly check if the input field contains a palindrome
 // I could have combined this with AnalysePalindrome(), but I wanted to demonstrate how the boolean result can be achieved more optimally
