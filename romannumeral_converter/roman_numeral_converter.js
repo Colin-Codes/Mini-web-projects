@@ -19,8 +19,17 @@ function convertToRoman(num) {
         return "";
     }
     // Check not decimal
-    if (num <= 0) {
-        return "Sorry, greater than zero only!";
+    if (num == 0) {
+        return "Zero is inavlid!";
+    }
+    if (num < 0 || num =="-") {
+        return "No negative numbers!";
+    }
+    if (num.includes(".")) {
+        return "No decimal numbers!";
+    }
+    if (isNaN(num)) {
+        return "Not a number!";
     }
     try {
         var roman = "";
@@ -58,3 +67,12 @@ function convertToNumber(roman) {
         return "Not a Roman numeral!"
     }
 }
+
+document.getElementById("number").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    document.getElementById("roman").value = convertToRoman(document.getElementById("number").value);
+});
+document.getElementById("roman").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    document.getElementById("number").value = convertToNumber(document.getElementById("roman").value);
+});

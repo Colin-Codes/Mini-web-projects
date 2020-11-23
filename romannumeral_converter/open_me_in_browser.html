@@ -1,18 +1,23 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container container-fluid">
+            <div class="form-group row col-md-6 offset-md-3" style="margin-top:20px">
+                <div class="col-md-6">
+                    <input class="col form-control form-control-lg text-center" style="padding:5px" type="text" id="number" placeholder="Enter number here...">
+                </div>
+                <div class="col-md-6">
+                    <input class="col form-control form-control-lg text-center" style="padding:5px" type="text" id="roman" placeholder="Or a Roman numeral...">
+                </div>
+            </div>
+        </div>
+    </body>
 
 <script src="roman_numeral_converter.js"></script>
-
-<input type="text" id="number" placeholder="Enter number here...">
-<input type="text" id="roman" placeholder="Enter Roman numeral...">
-
-<script>
-    document.getElementById("number").addEventListener("keyup", function(event) {
-        event.preventDefault();
-        document.getElementById("roman").value = convertToRoman(document.getElementById("number").value);
-    });
-    document.getElementById("roman").addEventListener("keyup", function(event) {
-        event.preventDefault();
-        document.getElementById("number").value = convertToNumber(document.getElementById("roman").value);
-    });
-</script>
 </html>
