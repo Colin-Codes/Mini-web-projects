@@ -1,0 +1,18 @@
+<html>
+
+<script src="roman_numeral_converter.js"></script>
+
+<input type="text" id="number" placeholder="Enter number here...">
+<input type="text" id="roman" placeholder="Enter Roman numeral...">
+
+<script>
+    document.getElementById("number").addEventListener("keyup", function(event) {
+        event.preventDefault();
+        document.getElementById("roman").value = convertToRoman(document.getElementById("number").value);
+    });
+    document.getElementById("roman").addEventListener("keyup", function(event) {
+        event.preventDefault();
+        document.getElementById("number").value = convertToNumber(document.getElementById("roman").value);
+    });
+</script>
+</html>
